@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{410D9C1E-7C41-4428-8EB3-B98D4196753A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LogoUI.Samples.Client.Model.Fake</RootNamespace>
+    <AssemblyName>LogoUI.Samples.Client.Model.Fake</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'DebugWithFake|AnyCPU' ">
+    <OutputPath>..\Bin\DebugWithFake\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LogoFX.UI.Bootstraping.Contracts">
+      <HintPath>..\Lib\LogoFX\LogoFX.UI.Bootstraping.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="LogoFX.UI.Bootstrapping.SimpleContainer">
+      <HintPath>..\Lib\LogoFX\LogoFX.UI.Bootstrapping.SimpleContainer.dll</HintPath>
+    </Reference>
+    <Reference Include="LogoFX.UI.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\LogoFX\LogoFX.UI.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="LogoFX.UI.Model, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\LogoFX\LogoFX.UI.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="LogoFX.UI.Model.Contracts, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\LogoFX\LogoFX.UI.Model.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="Solid.Practices.IoC">
+      <HintPath>..\Lib\Solid\Solid.Practices.IoC.dll</HintPath>
+    </Reference>
+    <Reference Include="Solid.Practices.Modularity">
+      <HintPath>..\Lib\Solid\Solid.Practices.Modularity.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FakeDataService.cs" />
+    <Compile Include="FakeLoginService.cs" />
+    <Compile Include="Module.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LogoUI.Samples.Client.Model.Contracts\LogoUI.Samples.Client.Model.Contracts.csproj">
+      <Project>{23be14f7-5115-46a2-872f-dad1e47b1e9a}</Project>
+      <Name>LogoUI.Samples.Client.Model.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LogoUI.Samples.Client.Model.Shared\LogoUI.Samples.Client.Model.Shared.csproj">
+      <Project>{48258cd5-142e-44be-a4d3-5b477cf3ffd9}</Project>
+      <Name>LogoUI.Samples.Client.Model.Shared</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
