@@ -41,6 +41,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogoUI.Samples.Client.Data.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogoUI.Samples.Client.Data.Providers.Fake", "LogoUI.Samples.Client.Data.Providers.Fake\LogoUI.Samples.Client.Data.Providers.Fake.csproj", "{553749EC-1D43-4640-BC99-D74595D61E0A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogoUI.Samples.Client.Data.Providers.Real", "LogoUI.Samples.Client.Data.Providers.Real\LogoUI.Samples.Client.Data.Providers.Real.csproj", "{6C56DA4B-0426-489C-845C-57B1C0AD51A5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -150,6 +152,15 @@ Global
 		{553749EC-1D43-4640-BC99-D74595D61E0A}.DebugWithReal|Any CPU.Build.0 = Debug|Any CPU
 		{553749EC-1D43-4640-BC99-D74595D61E0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{553749EC-1D43-4640-BC99-D74595D61E0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C56DA4B-0426-489C-845C-57B1C0AD51A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C56DA4B-0426-489C-845C-57B1C0AD51A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C56DA4B-0426-489C-845C-57B1C0AD51A5}.DebugWithFake|Any CPU.ActiveCfg = DebugWithFake|Any CPU
+		{6C56DA4B-0426-489C-845C-57B1C0AD51A5}.DebugWithMock|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C56DA4B-0426-489C-845C-57B1C0AD51A5}.DebugWithMock|Any CPU.Build.0 = Debug|Any CPU
+		{6C56DA4B-0426-489C-845C-57B1C0AD51A5}.DebugWithReal|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C56DA4B-0426-489C-845C-57B1C0AD51A5}.DebugWithReal|Any CPU.Build.0 = Debug|Any CPU
+		{6C56DA4B-0426-489C-845C-57B1C0AD51A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C56DA4B-0426-489C-845C-57B1C0AD51A5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -171,5 +182,6 @@ Global
 		{7ADCF510-CE38-4BE1-8654-937D3D739E30} = {FFBD76C8-7D70-44D2-B78A-E1CB35845E1A}
 		{47BD9F45-48CC-46D2-9F02-2451A67BE8E7} = {FFBD76C8-7D70-44D2-B78A-E1CB35845E1A}
 		{553749EC-1D43-4640-BC99-D74595D61E0A} = {FFBD76C8-7D70-44D2-B78A-E1CB35845E1A}
+		{6C56DA4B-0426-489C-845C-57B1C0AD51A5} = {FFBD76C8-7D70-44D2-B78A-E1CB35845E1A}
 	EndGlobalSection
 EndGlobal
