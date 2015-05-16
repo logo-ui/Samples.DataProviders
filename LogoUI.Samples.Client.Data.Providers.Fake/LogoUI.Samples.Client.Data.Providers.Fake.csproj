@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{48258CD5-142E-44BE-A4D3-5B477CF3FFD9}</ProjectGuid>
+    <ProjectGuid>{553749EC-1D43-4640-BC99-D74595D61E0A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LogoUI.Samples.Client.Model.Shared</RootNamespace>
-    <AssemblyName>LogoUI.Samples.Client.Model.Shared</AssemblyName>
+    <RootNamespace>LogoUI.Samples.Client.Data.Providers.Fake</RootNamespace>
+    <AssemblyName>LogoUI.Samples.Client.Data.Providers.Fake</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -16,7 +16,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\Bin\Debug\</OutputPath>
+    <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -29,28 +29,41 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugWithFake|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\Bin\DebugWithFake\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
   <ItemGroup>
-    <Reference Include="LogoFX.UI.Core">
-      <HintPath>..\Lib\LogoFX\LogoFX.UI.Core.dll</HintPath>
+    <Reference Include="LogoFX.UI.Bootstraping.Contracts, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\LogoFX\LogoFX.UI.Bootstraping.Contracts.dll</HintPath>
     </Reference>
-    <Reference Include="LogoFX.UI.Model">
-      <HintPath>..\Lib\LogoFX\LogoFX.UI.Model.dll</HintPath>
+    <Reference Include="LogoFX.UI.Bootstrapping.SimpleContainer, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\LogoFX\LogoFX.UI.Bootstrapping.SimpleContainer.dll</HintPath>
     </Reference>
-    <Reference Include="LogoFX.UI.Model.Contracts">
-      <HintPath>..\Lib\LogoFX\LogoFX.UI.Model.Contracts.dll</HintPath>
+    <Reference Include="Solid.Practices.IoC, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Solid\Solid.Practices.IoC.dll</HintPath>
+    </Reference>
+    <Reference Include="Solid.Practices.Modularity, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Solid\Solid.Practices.Modularity.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ComplianceRecord.cs" />
-    <Compile Include="DataService.cs" />
-    <Compile Include="LoginService.cs" />
-    <Compile Include="LogoModel.cs" />
+    <Compile Include="FakeComplianceProvider.cs" />
+    <Compile Include="FakeLoginProvider.cs" />
+    <Compile Include="Module.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserContext.cs" />
-    <Compile Include="UserManagement\LocalUser.cs" />
-    <Compile Include="UserManagement\UserBase.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LogoUI.Samples.Client.Data.Contracts\LogoUI.Samples.Client.Data.Contracts.csproj">
@@ -60,10 +73,6 @@
     <ProjectReference Include="..\LogoUI.Samples.Client.Data.Providers.Contracts\LogoUI.Samples.Client.Data.Providers.Contracts.csproj">
       <Project>{47BD9F45-48CC-46D2-9F02-2451A67BE8E7}</Project>
       <Name>LogoUI.Samples.Client.Data.Providers.Contracts</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\LogoUI.Samples.Client.Model.Contracts\LogoUI.Samples.Client.Model.Contracts.csproj">
-      <Project>{23BE14F7-5115-46A2-872F-DAD1E47B1E9A}</Project>
-      <Name>LogoUI.Samples.Client.Model.Contracts</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

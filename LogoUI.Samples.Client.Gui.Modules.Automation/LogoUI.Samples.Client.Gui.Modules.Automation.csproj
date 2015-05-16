@@ -116,7 +116,7 @@
     </ProjectReference>
     <ProjectReference Include="..\LogoUI.Samples.Client.Gui.Modularity\LogoUI.Samples.Client.Gui.Modularity.csproj">
       <Project>{B4CAD13A-CF4C-4C59-A1D1-7E9A6CE0E745}</Project>
-      <Name>Promisec.ControlCenter.Client.Gui.Modularity</Name>
+      <Name>LogoUI.Samples.Client.Gui.Modularity</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
